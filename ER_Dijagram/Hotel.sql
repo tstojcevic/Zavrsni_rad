@@ -53,3 +53,16 @@ create table djelatnik_rezervacija (
     djelatnik int
 );
 
+create table rezervacija_smjestaj (
+    sifra int not null primary key auto_increment,
+    rezervacija int,
+    smjestaj int
+);
+
+
+alter table djelatnik add foreign key (radno_mjesto) references radno_mjesto(sifra);
+alter table djelatnik_rezervacija add foreign key(djelatnik) references djelatnik(sifra);
+alter table djelatnik_rezervacija add foreign key(rezervacija) references rezervacija(sifra);
+alter table rezervacija add foreign key(gost) references gost(sifra);
+alter table rezervacija_smjestaj add foreign key(smjestaj) references smjestaj(sifra);
+alter table rezervacija_smjestaj add foreign key(rezervacija) references rezervacija(sifra);
