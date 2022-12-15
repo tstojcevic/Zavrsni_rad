@@ -37,7 +37,8 @@ create table rezervacija (
     broj_gostiju int not null,
     broj_rezervacije varchar(20),
     broj_smjestajnih_jedinica varchar(20),
-    gost int 
+    gost int, 
+    djelatnik int
 );
 
 create table radno_mjesto (
@@ -47,11 +48,6 @@ create table radno_mjesto (
     smjenski_rad boolean
 );
 
-create table djelatnik_rezervacija (
-    sifra int not null primary key auto_increment,
-    rezervacija int,
-    djelatnik int
-);
 
 create table rezervacija_smjestaj (
     sifra int not null primary key auto_increment,
@@ -61,8 +57,7 @@ create table rezervacija_smjestaj (
 
 
 alter table djelatnik add foreign key (radno_mjesto) references radno_mjesto(sifra);
-alter table djelatnik_rezervacija add foreign key(djelatnik) references djelatnik(sifra);
-alter table djelatnik_rezervacija add foreign key(rezervacija) references rezervacija(sifra);
 alter table rezervacija add foreign key(gost) references gost(sifra);
+alter table rezervacija add foreign key(djelatnik) references djelatnik(sifra);
 alter table rezervacija_smjestaj add foreign key(smjestaj) references smjestaj(sifra);
 alter table rezervacija_smjestaj add foreign key(rezervacija) references rezervacija(sifra);
