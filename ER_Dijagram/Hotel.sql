@@ -45,7 +45,7 @@ create table radno_mjesto (
     sifra int not null primary key auto_increment,
     naziv varchar(30) not null,
     placa decimal (18,2) not null,
-    smjenski_rad boolean
+    smjenski_rad boolean not null
 );
 
 
@@ -61,3 +61,21 @@ alter table rezervacija add foreign key(gost) references gost(sifra);
 alter table rezervacija add foreign key(djelatnik) references djelatnik(sifra);
 alter table rezervacija_smjestaj add foreign key(smjestaj) references smjestaj(sifra);
 alter table rezervacija_smjestaj add foreign key(rezervacija) references rezervacija(sifra);
+
+insert into gost (ime,prezime,oib,email)
+values ('Marko','Marković',01234567891,'mmarkovic@email.com'), ('Petar','Petrović',12345678910,'ppetrovic@email.com'), ('Ivan','Ivić',23456789123,'iivic@email.com');
+
+insert into radno_mjesto (naziv,placa,smjenski_rad)
+values ('Recepcija', 6900.00, 1), ('Kuhinja', 8000.00, 1), ('Bar', 6000.00, 0);
+
+insert into djelatnik (ime,prezime,br_ugovora,oib,radno_mjesto)
+values ('Marija', 'Mitrović', 'Br.1256', 45678932145,1), ('Sofija', 'Pašalić', 'Br.3478', 67912374591,2), ('Darko', 'Stazić', 'Br.3978', 65278913918,3);
+
+insert into smjestaj (vrsta,broj_kreveta,cijena,raspolozivost)
+values ('Polupansion', 2, 1000.00, 1),('Puni pansion', 2, 1250.00, 0), ('All inclusive', 3, 2000.00, 1);
+
+insert into rezervacija (datum_prijave,datum_odjave,broj_gostiju,gost,djelatnik)
+values ('2022-05-25','2022-05-30',2,2,1), ('2022-06-12','2022-06-20',3,1,1), ('2022-07-28','2022-08-05',4,3,1);
+
+insert into rezervacija_smjestaj (rezervacija,smjestaj)
+values (1,1), (2,2), (3,3);
