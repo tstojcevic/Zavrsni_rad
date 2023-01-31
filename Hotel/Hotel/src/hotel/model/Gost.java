@@ -4,7 +4,7 @@ public class Gost extends Entitet{
 	
 	private String ime;
 	private String prezime;
-	private int OIB;
+	private String OIB;
 	private String email;
 	private int kontakTelefon;
 	
@@ -13,7 +13,7 @@ public class Gost extends Entitet{
 	public Gost() {
 		super();
 	}
-	public Gost(int sifra, String ime, String prezime, int oIB, String email, int kontakTelefon) {
+	public Gost(int sifra, String ime, String prezime, String oIB, String email, int kontakTelefon) {
 		super(sifra);
 		this.ime = ime;
 		this.prezime = prezime;
@@ -33,10 +33,10 @@ public class Gost extends Entitet{
 	public void setPrezime(String prezime) {
 		this.prezime = prezime;
 	}
-	public int getOIB() {
+	public String getOIB() {
 		return OIB;
 	}
-	public void setOIB(int oIB) {
+	public void setOIB(String oIB) {
 		OIB = oIB;
 	}
 	public String getEmail() {

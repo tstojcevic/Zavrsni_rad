@@ -1,9 +1,11 @@
 package hotel.model;
 
+import java.math.BigDecimal;
+
 public class radnoMjesto extends Entitet {
 	
 	private String naziv;
-	private float placa;
+	private BigDecimal placa;
 	private boolean smjenskiRad;
 	
 	
@@ -12,7 +14,7 @@ public class radnoMjesto extends Entitet {
 	public radnoMjesto() {
 		super();
 	}
-	public radnoMjesto(int sifra, String naziv, float placa, boolean smjenskiRad) {
+	public radnoMjesto(int sifra, String naziv, BigDecimal placa, boolean smjenskiRad) {
 		super(sifra);
 		this.naziv = naziv;
 		this.placa = placa;
@@ -24,10 +26,10 @@ public class radnoMjesto extends Entitet {
 	public void setNaziv(String naziv) {
 		this.naziv = naziv;
 	}
-	public float getPlaca() {
+	public BigDecimal getPlaca() {
 		return placa;
 	}
-	public void setPlaca(float placa) {
+	public void setPlaca(BigDecimal placa) {
 		this.placa = placa;
 	}
 	public boolean isSmjenskiRad() {

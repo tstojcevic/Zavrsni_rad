@@ -5,7 +5,7 @@ public class Djelatnik extends Entitet{
 	private String ime;
 	private String prezime;
 	private String brojUgovora;
-	private int OIB;
+	private String OIB;
 	private radnoMjesto radnoMjesto;
 	
 	
@@ -13,7 +13,7 @@ public class Djelatnik extends Entitet{
 	public Djelatnik() {
 		super();
 	}
-	public Djelatnik(int sifra, String ime, String prezime, String brojUgovora, int oIB,
+	public Djelatnik(int sifra, String ime, String prezime, String brojUgovora, String oIB,
 			hotel.model.radnoMjesto radnoMjesto) {
 		super(sifra);
 		this.ime = ime;
@@ -40,10 +40,10 @@ public class Djelatnik extends Entitet{
 	public void setBrojUgovora(String brojUgovora) {
 		this.brojUgovora = brojUgovora;
 	}
-	public int getOIB() {
+	public String getOIB() {
 		return OIB;
 	}
-	public void setOIB(int oIB) {
+	public void setOIB(String oIB) {
 		OIB = oIB;
 	}
 	public radnoMjesto getRadnoMjesto() {
