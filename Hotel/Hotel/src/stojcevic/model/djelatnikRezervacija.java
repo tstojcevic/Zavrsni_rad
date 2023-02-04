@@ -1,4 +1,4 @@
-package hotel.model;
+package stojcevic.model;
 
 public class djelatnikRezervacija extends Entitet{
 	
