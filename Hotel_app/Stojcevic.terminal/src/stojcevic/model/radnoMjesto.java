@@ -1,4 +1,4 @@
-package model;
+package stojcevic.model;
 
 import java.math.BigDecimal;
 

@@ -1,4 +1,4 @@
-package model;
+package stojcevic.model;
 
 public abstract class Entitet {
 	

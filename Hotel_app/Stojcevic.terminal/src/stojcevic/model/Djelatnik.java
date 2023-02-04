@@ -1,4 +1,4 @@
-package model;
+package stojcevic.model;
 
 public class Djelatnik extends Entitet {
 	
@@ -16,8 +16,9 @@ public class Djelatnik extends Entitet {
 	
 	
 	
+	
 	public Djelatnik(int sifra, String ime, String prezime, String brojUgovora, String oIB,
-			model.radnoMjesto radnoMjesto) {
+			stojcevic.model.radnoMjesto radnoMjesto) {
 		super(sifra);
 		this.ime = ime;
 		this.prezime = prezime;
@@ -25,6 +26,11 @@ public class Djelatnik extends Entitet {
 		OIB = oIB;
 		this.radnoMjesto = radnoMjesto;
 	}
+
+
+
+
+	
 
 
 
