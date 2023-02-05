@@ -1,15 +1,23 @@
 package stojcevic;
 
+import java.util.Scanner;
+
+import stojcevic.obrada.Djelatnici;
+
 public class Start {
 	
+	private Djelatnici djelatnici;
+	
 public Start() {
-		
+	
+		Pomocno.ulaz = new Scanner(System.in);
+		djelatnici = new Djelatnici(this);
 		pozdravnaPoruka();
 		glavniIzbornik();
 		
 	}
 
-	private void glavniIzbornik() {
+	public void glavniIzbornik() {
 		
 		System.out.println("");
 		System.out.println("GLAVNI IZBORNIK");
@@ -20,7 +28,21 @@ public Start() {
 		System.out.println("4. Rezervacija");
 		System.out.println("5. Smještaj");
 		System.out.println("6. Izlaz iz programa");
+		odabirGlavnogIzbornika();
 		
+		
+	}
+
+	private void odabirGlavnogIzbornika() {
+		switch(Pomocno.unosBrojRaspon("Odabrana opcija: ", 1, 6)) {
+		
+		case 1:
+			djelatnici.izbornik();
+			break;
+		case 6:
+			System.out.println("Izlazite iz programa.");
+			System.out.println("Doviđenja!");
+		}
 		
 	}
 
