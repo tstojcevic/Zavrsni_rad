@@ -47,8 +47,10 @@ public void izbornik() {
 		switch(Pomocno.unosBrojRaspon("Odaberite opciju: ", 1, 5)) {
 		case 1:
 			pregled();
+			break;
 		case 2:
 			unosNovogDjelatnika();
+			break;
 		case 5:
 			start.glavniIzbornik();
 		}
