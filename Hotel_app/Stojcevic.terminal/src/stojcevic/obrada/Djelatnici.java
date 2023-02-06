@@ -31,11 +31,11 @@ public class Djelatnici {
 	}
 	
 private void testPodaci() {
-		if(Pomocno.DEV) {
+//		if(Pomocno.DEV) {
 			djelatnici.add(new Djelatnik(1, "Marko", "Marković", "25/2023", "02410283576", null));
 			djelatnici.add(new Djelatnik(2, "Ivan", "Antolić", "20/2023", "97356332162", null));
 			djelatnici.add(new Djelatnik(3, "Vanja", "Tolić", "15/2023", "51922450731", null));
-		}
+//		}
 		
 	}
 

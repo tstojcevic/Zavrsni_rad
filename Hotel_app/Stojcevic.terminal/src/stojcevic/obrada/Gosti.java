@@ -27,11 +27,11 @@ public class Gosti {
 	}
 
 	private void testPodaci() {
-		if (Pomocno.DEV) {
+//		if (Pomocno.DEV) {
 			gosti.add(new Gost(1, "Ivica", "Ivić", "44036942226", "iivic@gmail.com", "+385981234567"));
 			gosti.add(new Gost(2, "Marija", "Marijanović", "06442453523", "mmarijanovic@gmail.com", "+385951486277"));
 			gosti.add(new Gost(3, "Ksenija", "Horvat", "06442453523", "khorvat@gmail.com", "+385951486277"));
-		}
+//		}
 	}
 
 	public void izbornik() {
