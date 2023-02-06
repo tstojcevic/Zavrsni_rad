@@ -1,5 +1,6 @@
 package stojcevic.obrada;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,14 +20,25 @@ public class Djelatnici {
 		super();
 		this.start = start;
 		djelatnici = new ArrayList<>();
+		testPodaci();
 	}
 
 	public Djelatnici(Start start, List<Djelatnik> djelatnici) {
 		super();
 		this.start = start;
 		this.djelatnici = djelatnici;
+		testPodaci();
 	}
 	
+private void testPodaci() {
+		if(Pomocno.DEV) {
+			djelatnici.add(new Djelatnik(1, "Marko", "Marković", "25/2023", "02410283576", null));
+			djelatnici.add(new Djelatnik(2, "Ivan", "Antolić", "20/2023", "97356332162", null));
+			djelatnici.add(new Djelatnik(3, "Vanja", "Tolić", "15/2023", "51922450731", null));
+		}
+		
+	}
+
 public void izbornik() {
 		
 		System.out.println("");
@@ -46,10 +58,26 @@ public void izbornik() {
 	private void odabirIzbornika() {
 		switch(Pomocno.unosBrojRaspon("Odaberite opciju: ", 1, 5)) {
 		case 1:
-			pregled();
+			pregled(true);
 			break;
 		case 2:
 			unosNovogDjelatnika();
+			break;
+		case 3:
+			if(djelatnici.size()==0) {
+				System.out.println("Nema djelatnika kojeg bi mijenali");
+				izbornik();
+			}else {
+				promjena();
+			}
+			break;
+		case 4:
+			if(djelatnici.size()==0) {
+				System.out.println("Nema djelatnika kojeg bi obrisali");
+				izbornik();
+			}else {
+				brisanje();
+			}
 			break;
 		case 5:
 			start.glavniIzbornik();
@@ -57,12 +85,38 @@ public void izbornik() {
 	
 }
 
-	private void pregled() {
-		System.out.println("Djelatnici u aplikaciji:");
-		for (Djelatnik d : djelatnici ) {
-			System.out.println(d);
-		}
+	private void brisanje() {
+		pregled(false);
+		int rb = Pomocno.unosBrojRaspon("Odaberite djelatnika kojeg želite obrisati: ", 1, djelatnici.size());
+		djelatnici.remove(rb - 1);
 		izbornik();
+		
+	}
+
+	private void promjena() {
+		pregled(false);
+		int rb = Pomocno.unosBrojRaspon("Unesite djelatnika kojeg želite promijeniti: ", 1, djelatnici.size());
+		Djelatnik d = djelatnici.get(rb-1);
+		d.setIme(Pomocno.unosTeksta("Unesite ime djelatnika: "));
+		d.setPrezime(Pomocno.unosTeksta("Unesite prezime djelatnika: "));
+		d.setBrojUgovora(Pomocno.unosTeksta("Unesite broj ugovora djelatnika: "));
+		d.setOIB(Pomocno.unosTeksta("Unesite OIB djelatnika: "));
+//		d.setRadnoMjesto(Pomocno.unosTeksta("Unesite radno mjesto djelatnika: "));
+		
+		
+		izbornik();
+	}
+
+	private void pregled(boolean prikaziIzbornik) {
+		System.out.println("Djelatnici u aplikaciji:");
+		int rb = 1;
+		for (Djelatnik d : djelatnici ) {
+			System.out.println(rb++ + ". " + d);
+		}
+		if (prikaziIzbornik) {
+			izbornik();
+		}
+		
 	}
 
 	private void unosNovogDjelatnika() {
