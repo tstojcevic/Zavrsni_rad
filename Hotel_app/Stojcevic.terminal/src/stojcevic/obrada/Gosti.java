@@ -66,7 +66,7 @@ public void izbornik() {
 				System.out.println("Nema gosta kojeg bi obrisali");
 				izbornik();
 			}else {
-//				brisanje();
+				brisanje();
 			}
 			break;
 		case 5:
@@ -75,6 +75,14 @@ public void izbornik() {
 	
 	
 }
+
+
+	private void brisanje() {
+		pregled(false);
+		int rb = Pomocno.unosBrojRaspon("Odaberite gosta kojeg želite obrisati: ", 1, gosti.size());
+		gosti.remove(rb-1);
+		izbornik();
+	}
 
 
 	private void promjena() {
