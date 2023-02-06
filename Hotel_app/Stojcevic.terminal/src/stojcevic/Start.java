@@ -42,6 +42,9 @@ public Start() {
 		case 1:
 			djelatnici.izbornik();
 			break;
+		case 2:
+			gosti.izbornik();
+			break;
 		case 6:
 			System.out.println("Izlazite iz programa.");
 			System.out.println("Doviđenja!");
