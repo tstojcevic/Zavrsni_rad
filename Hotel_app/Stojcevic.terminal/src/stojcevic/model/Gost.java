@@ -6,14 +6,14 @@ public class Gost extends Entitet {
 	private String prezime;
 	private String OIB;
 	private String email;
-	private int kontakTelefon;
+	private String kontakTelefon;
 	
 	
 	
 	public Gost() {
 		super();
 	}
-	public Gost(int sifra, String ime, String prezime, String oIB, String email, int kontakTelefon) {
+	public Gost(int sifra, String ime, String prezime, String oIB, String email, String kontakTelefon) {
 		super(sifra);
 		this.ime = ime;
 		this.prezime = prezime;
@@ -45,10 +45,10 @@ public class Gost extends Entitet {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public int getKontakTelefon() {
+	public String getKontakTelefon() {
 		return kontakTelefon;
 	}
-	public void setKontakTelefon(int kontakTelefon) {
+	public void setKontakTelefon(String kontakTelefon) {
 		this.kontakTelefon = kontakTelefon;
 	}
 	
