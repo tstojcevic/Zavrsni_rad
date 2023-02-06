@@ -51,7 +51,7 @@ public void izbornik() {
 			pregled(true);
 			break;
 		case 2:
-//			unosNovogGosta();
+			unosNovogGosta();
 			break;
 		case 3:
 			if(gosti.size()==0) {
@@ -75,6 +75,24 @@ public void izbornik() {
 	
 	
 }
+
+
+	private void unosNovogGosta() {
+		gosti.add(unesiNovogGosta());
+		izbornik();
+	}
+
+
+	private Gost unesiNovogGosta() {
+		Gost g = new Gost();
+		g.setSifra(Pomocno.unosBrojRaspon("Unesite šifru gosta: ", 1, Integer.MAX_VALUE));
+		g.setIme(Pomocno.unosTeksta("Unesite ime gosta: "));
+		g.setPrezime(Pomocno.unosTeksta("Unesite prezime gosta"));
+		g.setOIB(Pomocno.unosTeksta("Unesite OIB gosta: "));
+		g.setEmail(Pomocno.unosTeksta("Unesite e-mail gosta: "));
+		g.setKontakTelefon(Pomocno.unosTeksta("Unesite kontakt telefon gosta: "));
+		return g;
+	}
 
 
 	private void pregled(boolean prikaziIzbornik) {
