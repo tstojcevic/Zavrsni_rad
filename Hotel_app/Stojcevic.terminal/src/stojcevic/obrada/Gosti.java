@@ -58,7 +58,7 @@ public void izbornik() {
 				System.out.println("Nema gosta kojeg bi mijenali");
 				izbornik();
 			}else {
-//				promjena();
+				promjena();
 			}
 			break;
 		case 4:
@@ -75,6 +75,20 @@ public void izbornik() {
 	
 	
 }
+
+
+	private void promjena() {
+		pregled(false);
+		int rb = Pomocno.unosBrojRaspon("Unesite gosta kojeg želite promijeniti: ", 1, gosti.size());
+		Gost g = gosti.get(rb-1);
+		g.setIme(Pomocno.unosTeksta("Unesite ime gosta: "));
+		g.setPrezime(Pomocno.unosTeksta("Unesite prezime gosta"));
+		g.setOIB(Pomocno.unosTeksta("Unesite OIB gosta: "));
+		g.setEmail(Pomocno.unosTeksta("Unesite e-mail gosta: "));
+		g.setKontakTelefon(Pomocno.unosTeksta("Unesite kontakt telefon gosta: "));
+		
+		izbornik();
+	}
 
 
 	private void unosNovogGosta() {
