@@ -52,7 +52,11 @@ public Start() {
 	}
 	
 	public static void main(String[] args) {
-		
+		if(args.length==1) {
+			Pomocno.DEV=true;
+		}else {
+			Pomocno.DEV=false;
+		}
 		new Start();
 		
 	}
