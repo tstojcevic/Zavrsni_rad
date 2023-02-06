@@ -5,7 +5,6 @@ import java.util.List;
 
 import stojcevic.Pomocno;
 import stojcevic.Start;
-import stojcevic.model.Djelatnik;
 import stojcevic.model.Gost;
 
 public class Gosti {
