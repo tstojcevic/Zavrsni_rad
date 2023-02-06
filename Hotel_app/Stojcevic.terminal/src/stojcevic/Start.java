@@ -3,15 +3,18 @@ package stojcevic;
 import java.util.Scanner;
 
 import stojcevic.obrada.Djelatnici;
+import stojcevic.obrada.Gosti;
 
 public class Start {
 	
 	private Djelatnici djelatnici;
+	private Gosti gosti;
 	
 public Start() {
 	
 		Pomocno.ulaz = new Scanner(System.in);
 		djelatnici = new Djelatnici(this);
+		gosti = new Gosti(this);
 		pozdravnaPoruka();
 		glavniIzbornik();
 		
