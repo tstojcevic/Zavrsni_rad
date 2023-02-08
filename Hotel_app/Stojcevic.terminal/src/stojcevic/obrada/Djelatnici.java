@@ -107,7 +107,7 @@ public void izbornik() {
 		izbornik();
 	}
 
-	private void pregled(boolean prikaziIzbornik) {
+	public void pregled(boolean prikaziIzbornik) {
 		System.out.println("Djelatnici u aplikaciji:");
 		int rb = 1;
 		for (Djelatnik d : djelatnici ) {
