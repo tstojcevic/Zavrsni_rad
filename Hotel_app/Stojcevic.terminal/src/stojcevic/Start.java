@@ -4,17 +4,20 @@ import java.util.Scanner;
 
 import stojcevic.obrada.Djelatnici;
 import stojcevic.obrada.Gosti;
+import stojcevic.obrada.radnaMjesta;
 
 public class Start {
 	
 	private Djelatnici djelatnici;
 	private Gosti gosti;
+	private radnaMjesta radnaMjesta;
 	
 public Start() {
 	
 		Pomocno.ulaz = new Scanner(System.in);
 		djelatnici = new Djelatnici(this);
 		gosti = new Gosti(this);
+		radnaMjesta = new radnaMjesta(this);
 		pozdravnaPoruka();
 		glavniIzbornik();
 		
@@ -45,6 +48,9 @@ public Start() {
 		case 2:
 			gosti.izbornik();
 			break;
+		case 3:
+			radnaMjesta.izbornik();
+			break;
 		case 6:
 			System.out.println("Izlazite iz programa.");
 			System.out.println("Doviđenja!");
@@ -57,6 +63,12 @@ public Start() {
 		
 	}
 	
+	
+	
+	public Djelatnici getDjelatnici() {
+		return djelatnici;
+	}
+
 	public static void main(String[] args) {
 		if(args.length==1) {
 			Pomocno.DEV=true;

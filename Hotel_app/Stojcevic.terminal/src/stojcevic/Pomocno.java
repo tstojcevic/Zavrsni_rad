@@ -1,5 +1,6 @@
 package stojcevic;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Pomocno {
@@ -37,5 +38,14 @@ public class Pomocno {
 			return s;
 		}	
 	}
+	
+	public static BigDecimal unosPlace(String poruka) {
+
+		System.out.println(poruka);
+		String s = ulaz.nextLine();
+		return new BigDecimal(s);
+
+	}
+	
 	
 }
