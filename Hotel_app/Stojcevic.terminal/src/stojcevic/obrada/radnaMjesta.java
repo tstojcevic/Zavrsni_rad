@@ -20,6 +20,7 @@ public class radnaMjesta  {
 		super();
 		this.start = start;
 		radnaMjesta = new ArrayList<>();
+		testPodaci();
 	}
 	
 	
@@ -27,9 +28,15 @@ public class radnaMjesta  {
 		super();
 		this.start = start;
 		this.radnaMjesta = radnaMjesta;
+		testPodaci();
 	}
 	
 	
+private void testPodaci() {
+		
+	}
+
+
 public void izbornik() {
 		
 		System.out.println("");
