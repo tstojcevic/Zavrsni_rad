@@ -52,4 +52,9 @@ public class Gost extends Entitet {
 		this.kontakTelefon = kontakTelefon;
 	}
 	
+	@Override
+	public String toString() {
+		return "ime: " + ime + "	 prezime: " + prezime + "  OIB: " + OIB + "  e-mail: " + email + "  kontakt telefon: " + kontakTelefon ;
+	}
+	
 }
