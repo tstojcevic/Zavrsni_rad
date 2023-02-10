@@ -47,5 +47,21 @@ public class Pomocno {
 
 	}
 	
+	public static boolean unosStatusa(String poruka) {
+
+		String s;
+		while (true) {
+			System.out.println(poruka);
+			s = unosTeksta(poruka);
+			if (s.equalsIgnoreCase("DA")) {
+				return true;
+			}else if (s.equalsIgnoreCase("NE")) {
+				return false;
+			}else {
+			System.out.println("nepoznat upis");
+			}
+		}
+
+	}
 	
 }
