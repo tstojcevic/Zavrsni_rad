@@ -112,7 +112,7 @@ public void izbornik() {
 		r.setPlaca(Pomocno.unosPlace("Unesite iznos plaće: "));
 //		r.setSmjenskiRad(false);
 		start.getDjelatnici().pregled(false);
-		int rb = Pomocno.unosBrojRaspon("Unesite kojeg djelatnika želite na radnom mjestu: ", 1,
+		int rb = Pomocno.unosBrojRaspon("Odaberite djelatnika: ", 1,
 				start.getDjelatnici().getDjelatnici().size());
 //		r.setDjelatnik(start.getDjelatnici().getDjelatnici().get(rb-1));
 		

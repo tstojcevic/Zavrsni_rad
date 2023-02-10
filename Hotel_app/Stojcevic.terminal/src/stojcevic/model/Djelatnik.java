@@ -13,7 +13,7 @@ public class Djelatnik extends Entitet {
 	}
 
 	public Djelatnik(int sifra, String ime, String prezime, String brojUgovora, String oIB,
-			stojcevic.model.radnoMjesto radnoMjesto) {
+			radnoMjesto radnoMjesto) {
 		super(sifra);
 		this.ime = ime;
 		this.prezime = prezime;
