@@ -1,8 +1,6 @@
 package stojcevic;
 
 import java.math.BigDecimal;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Scanner;
 
 public class Pomocno {
@@ -66,20 +64,6 @@ public class Pomocno {
 
 	}
 	
-	public static Date unosDatuma(String poruka) {
-		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
-		Date date = null;
-		while (date == null) {
-			System.out.print(poruka + " (" +"dd-MM-yyyy" + "): ");
-			String dateStr = ulaz.nextLine();
-			try {
-				date = format.parse(dateStr, null);
-			} catch (Exception e) {
-				System.out.println("Pogrešan format datuma. Pokušajte ponovno.");
-			}
-		}
-
-		return date;
-	}
+	
 	
 }
