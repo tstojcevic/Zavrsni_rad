@@ -119,14 +119,6 @@ public void izbornik() {
 				start.getDjelatnici().getDjelatnici().size());
 		r.setDjelatnik(start.getDjelatnici().getDjelatnici().get(rb-1));
 		
-		while(true) {
-			start.getDjelatnici().pregled(false);
-			rb = Pomocno.unosBrojRaspon("Odaberite djelatnika za radno mjesto: ", 1, start.getDjelatnici().getDjelatnici().size());
-			r.getDjelatnici().add(start.getDjelatnici().getDjelatnici().get(rb-1));
-			if(Pomocno.unosBrojRaspon("0 za kraj dodavanja djelatnika", 0, Integer.MAX_VALUE)==0) {
-				break;
-			}
-		}
 		
 		radnaMjesta.add(r);
 		izbornik();
