@@ -33,6 +33,9 @@ public class radnaMjesta  {
 	
 	
 private void testPodaci() {
+		radnaMjesta.add(new radnoMjesto(1, "Kuhinja", "1500.00", true, start.getDjelatnici().getDjelatnici().subList(1, 3)));
+		radnaMjesta.add(new radnoMjesto(2, "Bar", "950.00", true, start.getDjelatnici().getDjelatnici().subList(2, 3)));
+		radnaMjesta.add(new radnoMjesto(3, "Recepcija", "1000.00", true, start.getDjelatnici().getDjelatnici().subList(3, 3)));
 		
 	}
 
