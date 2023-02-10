@@ -96,12 +96,12 @@ public void izbornik() {
 		radnoMjesto r = radnaMjesta.get(rb - 1);
 		r.setNaziv(Pomocno.unosTeksta("Unesite naziv radnog mjesta: "));
 		r.setPlaca(Pomocno.unosPlace("Unesite iznos plaće: "));
-//		r.setSmjenskiRad(false);
+		r.setSmjenskiRad(Pomocno.unosStatusa("Unesite 'da' ili 'ne' ukoliko je obvezan smjenski rad!"));
 		
 		start.getDjelatnici().pregled(false);
 		int i = Pomocno.unosBrojRaspon("Unesite kojeg djelatnika želite na radnom mjestu: ", 1,
 				start.getDjelatnici().getDjelatnici().size());
-//		r.setDjelatnik(start.getDjelatnici().getDjelatnici().get(i - 1));
+		r.setDjelatnik(start.getDjelatnici().getDjelatnici().get(i - 1));
 	}
 
 
@@ -110,11 +110,20 @@ public void izbornik() {
 		r.setSifra(Pomocno.unosBrojRaspon("Unesite šifru radnog mjesta: ", 1, Integer.MAX_VALUE));
 		r.setNaziv(Pomocno.unosTeksta("Unesite naziv radnog mjesta: "));
 		r.setPlaca(Pomocno.unosPlace("Unesite iznos plaće: "));
-//		r.setSmjenskiRad(false);
+		r.setSmjenskiRad(Pomocno.unosStatusa("Unesite 'da' ili 'ne' ukoliko je obvezan smjenski rad!"));
 		start.getDjelatnici().pregled(false);
 		int rb = Pomocno.unosBrojRaspon("Odaberite djelatnika: ", 1,
 				start.getDjelatnici().getDjelatnici().size());
-//		r.setDjelatnik(start.getDjelatnici().getDjelatnici().get(rb-1));
+		r.setDjelatnik(start.getDjelatnici().getDjelatnici().get(rb-1));
+		
+		while(true) {
+			start.getDjelatnici().pregled(false);
+			rb = Pomocno.unosBrojRaspon("Odaberite djelatnika za radno mjesto: ", 1, start.getDjelatnici().getDjelatnici().size());
+			r.getDjelatnici().add(start.getDjelatnici().getDjelatnici().get(rb-1));
+			if(Pomocno.unosBrojRaspon("0 za kraj dodavanja djelatnika", 0, Integer.MAX_VALUE)==0) {
+				break;
+			}
+		}
 		
 		radnaMjesta.add(r);
 		izbornik();
