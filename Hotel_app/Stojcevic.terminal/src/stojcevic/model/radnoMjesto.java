@@ -52,7 +52,10 @@ public class radnoMjesto extends Entitet {
 	}
 	
 	
-	
+	@Override
+	public String toString() {
+		return naziv;
+	}
 	
 	
 
