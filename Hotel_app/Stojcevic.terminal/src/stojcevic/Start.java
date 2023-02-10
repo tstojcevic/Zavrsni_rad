@@ -65,8 +65,15 @@ public Start() {
 	
 	
 	
+	
 	public Djelatnici getDjelatnici() {
 		return djelatnici;
+	}
+
+
+
+	public radnaMjesta getRadnaMjesta() {
+		return radnaMjesta;
 	}
 
 	public static void main(String[] args) {
