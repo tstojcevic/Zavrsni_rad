@@ -1,8 +1,6 @@
 package stojcevic.model;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 
 public class RadnoMjesto extends Entitet {
 	
@@ -11,21 +9,18 @@ public class RadnoMjesto extends Entitet {
 	private boolean smjenskiRad;
 	
 	
-	
-	
-	
 	public RadnoMjesto() {
-		super();
-		
-		
+		super();			
 }
+	
 	public RadnoMjesto(int sifra, String naziv, BigDecimal placa, boolean smjenskiRad)  {
 		super(sifra);
 		this.naziv = naziv;
 		this.placa = placa;
-		this.smjenskiRad = smjenskiRad;
-		
+		this.smjenskiRad = smjenskiRad;	
 	}
+	
+	
 	public String getNaziv() {
 		return naziv;
 	}
