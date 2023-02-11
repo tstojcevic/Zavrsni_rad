@@ -116,17 +116,12 @@ public void izbornik() {
 		r.setPlaca(Pomocno.unosPlace("Unesite iznos plaće: "));
 		r.setSmjenskiRad(Pomocno.unosStatusa("Unesite 'da' ili 'ne' ukoliko je obvezan smjenski rad!"));
 		start.getDjelatnici().pregled(false);
-		int rb = Pomocno.unosBrojRaspon("Odaberite djelatnika: ", 1,
-				start.getDjelatnici().getDjelatnici().size());
-		
-		
-		
+		int rb = Pomocno.unosBrojRaspon("Odaberite djelatnika: ", 1, start.getDjelatnici().getDjelatnici().size());
+			
 		radnaMjesta.add(r);
 		izbornik();
 	}
 
-
-	
 
 
 	public void pregled(boolean prikaziIzbornik) {
@@ -147,8 +142,6 @@ public void izbornik() {
 	public void setRadnaMjesta(List<RadnoMjesto> radnaMjesta) {
 		this.radnaMjesta = radnaMjesta;
 	}
-	
-	
 	
 
 }
