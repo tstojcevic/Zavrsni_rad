@@ -9,22 +9,22 @@ public class radnoMjesto extends Entitet {
 	private String naziv;
 	private BigDecimal placa;
 	private boolean smjenskiRad;
-	private List<Djelatnik> djelatnici;
+	
 	
 	
 	
 	
 	public radnoMjesto() {
 		super();
-		djelatnici = new ArrayList<>();
+		
 		
 }
-	public radnoMjesto(int sifra, String naziv, BigDecimal placa, boolean smjenskiRad, List<Djelatnik> djelatnici) {
+	public radnoMjesto(int sifra, String naziv, BigDecimal placa, boolean smjenskiRad)  {
 		super(sifra);
 		this.naziv = naziv;
 		this.placa = placa;
 		this.smjenskiRad = smjenskiRad;
-		this.djelatnici = djelatnici;
+		
 	}
 	public String getNaziv() {
 		return naziv;
@@ -44,12 +44,7 @@ public class radnoMjesto extends Entitet {
 	public void setSmjenskiRad(boolean smjenskiRad) {
 		this.smjenskiRad = smjenskiRad;
 	}
-	public List<Djelatnik> getDjelatnici() {
-		return djelatnici;
-	}
-	public void setDjelatnici(List<Djelatnik> djelatnici) {
-		this.djelatnici = djelatnici;
-	}
+	
 	
 	
 	@Override

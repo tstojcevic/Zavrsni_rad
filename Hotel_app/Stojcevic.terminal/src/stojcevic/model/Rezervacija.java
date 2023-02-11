@@ -11,23 +11,24 @@ public class Rezervacija extends Entitet{
 	private int brojGostiju;
 	private String brojRezervacije;
 	private int brojSmjestajnihJedinica;
-	private List<Gost> gosti;
+	private  Gost gost;
+	private List<Djelatnik> djelatnici;
 	
 	
 	
 	public Rezervacija() {
 		super();
-		gosti = new ArrayList<>();
 	}
 	public Rezervacija(int sifra, Date datumPrijave, Date datumOdjave, int brojGostiju, String brojRezervacije,
-			int brojSmjestajnihJedinica, Gost gost) {
+			int brojSmjestajnihJedinica, Gost gost, List<Djelatnik> djelatnici) {
 		super(sifra);
 		this.datumPrijave = datumPrijave;
 		this.datumOdjave = datumOdjave;
 		this.brojGostiju = brojGostiju;
 		this.brojRezervacije = brojRezervacije;
 		this.brojSmjestajnihJedinica = brojSmjestajnihJedinica;
-		this.gosti = gosti;
+		this.gost = gost;
+		this.djelatnici = djelatnici;
 	}
 	public Date getDatumPrijave() {
 		return datumPrijave;
@@ -59,11 +60,22 @@ public class Rezervacija extends Entitet{
 	public void setBrojSmjestajnihJedinica(int brojSmjestajnihJedinica) {
 		this.brojSmjestajnihJedinica = brojSmjestajnihJedinica;
 	}
-	public List<Gost> getGosti() {
-		return gosti;
+	public Gost getGost() {
+		return gost;
 	}
-	public void setGosti(List<Gost> gosti) {
-		this.gosti = gosti;
+	public void setGost(Gost gost) {
+		this.gost = gost;
 	}
-
+	public List<Djelatnik> getDjelatnici() {
+		return djelatnici;
+	}
+	public void setDjelatnici(List<Djelatnik> djelatnici) {
+		this.djelatnici = djelatnici;
+	}
+	
+	
+	
+	
+	
+	
 }

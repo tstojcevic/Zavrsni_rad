@@ -1,5 +1,6 @@
 package stojcevic.obrada;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,9 +34,9 @@ public class radnaMjesta  {
 	
 	
 private void testPodaci() {
-		radnaMjesta.add(new radnoMjesto(1, "Kuhinja", "1500.00", true, start.getDjelatnici().getDjelatnici().subList(1, 3)));
-		radnaMjesta.add(new radnoMjesto(2, "Bar", "950.00", true, start.getDjelatnici().getDjelatnici().subList(2, 3)));
-		radnaMjesta.add(new radnoMjesto(3, "Recepcija", "1000.00", true, start.getDjelatnici().getDjelatnici().subList(3, 3)));
+		radnaMjesta.add(new radnoMjesto(1, "Kuhinja", new BigDecimal(1500), true));
+		radnaMjesta.add(new radnoMjesto(2, "Bar", new BigDecimal(950), true));
+		radnaMjesta.add(new radnoMjesto(3, "Recepcija", new BigDecimal(1000), true));
 		
 	}
 
@@ -104,7 +105,7 @@ public void izbornik() {
 		start.getDjelatnici().pregled(false);
 		int i = Pomocno.unosBrojRaspon("Unesite kojeg djelatnika želite na radnom mjestu: ", 1,
 				start.getDjelatnici().getDjelatnici().size());
-		r.setDjelatnik(start.getDjelatnici().getDjelatnici().get(i - 1));
+		
 	}
 
 
@@ -117,7 +118,7 @@ public void izbornik() {
 		start.getDjelatnici().pregled(false);
 		int rb = Pomocno.unosBrojRaspon("Odaberite djelatnika: ", 1,
 				start.getDjelatnici().getDjelatnici().size());
-		r.setDjelatnik(start.getDjelatnici().getDjelatnici().get(rb-1));
+		
 		
 		
 		radnaMjesta.add(r);
