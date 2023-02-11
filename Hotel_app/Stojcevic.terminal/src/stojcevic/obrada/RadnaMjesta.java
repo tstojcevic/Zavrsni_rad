@@ -7,17 +7,17 @@ import java.util.List;
 import stojcevic.Pomocno;
 import stojcevic.Start;
 import stojcevic.model.Djelatnik;
-import stojcevic.model.radnoMjesto;
+import stojcevic.model.RadnoMjesto;
 
-public class radnaMjesta  {
+public class RadnaMjesta  {
 	
-	private List<radnoMjesto> radnaMjesta;
+	private List<RadnoMjesto> radnaMjesta;
 	private Start start;
 	
 	
 	
 	
-	public radnaMjesta(Start start) {
+	public RadnaMjesta(Start start) {
 		super();
 		this.start = start;
 		radnaMjesta = new ArrayList<>();
@@ -25,7 +25,7 @@ public class radnaMjesta  {
 	}
 	
 	
-	public radnaMjesta(Start start, List<radnoMjesto> radnaMjesta) {
+	public RadnaMjesta(Start start, List<RadnoMjesto> radnaMjesta) {
 		super();
 		this.start = start;
 		this.radnaMjesta = radnaMjesta;
@@ -34,9 +34,9 @@ public class radnaMjesta  {
 	
 	
 private void testPodaci() {
-		radnaMjesta.add(new radnoMjesto(1, "Kuhinja", new BigDecimal(1500), true));
-		radnaMjesta.add(new radnoMjesto(2, "Bar", new BigDecimal(950), true));
-		radnaMjesta.add(new radnoMjesto(3, "Recepcija", new BigDecimal(1000), true));
+		radnaMjesta.add(new RadnoMjesto(1, "Kuhinja", new BigDecimal(1500), true));
+		radnaMjesta.add(new RadnoMjesto(2, "Bar", new BigDecimal(950), true));
+		radnaMjesta.add(new RadnoMjesto(3, "Recepcija", new BigDecimal(1000), true));
 		
 	}
 
@@ -97,7 +97,7 @@ public void izbornik() {
 	private void promjena() {
 		pregled(false);
 		int rb = Pomocno.unosBrojRaspon("Unesite radno mjesto koje želite promijeniti: ", 1, radnaMjesta.size());
-		radnoMjesto r = radnaMjesta.get(rb - 1);
+		RadnoMjesto r = radnaMjesta.get(rb - 1);
 		r.setNaziv(Pomocno.unosTeksta("Unesite naziv radnog mjesta: "));
 		r.setPlaca(Pomocno.unosPlace("Unesite iznos plaće: "));
 		r.setSmjenskiRad(Pomocno.unosStatusa("Unesite 'da' ili 'ne' ukoliko je obvezan smjenski rad!"));
@@ -110,7 +110,7 @@ public void izbornik() {
 
 
 	private void unosNovogRadnogMjesta() {
-		radnoMjesto r = new radnoMjesto();
+		RadnoMjesto r = new RadnoMjesto();
 		r.setSifra(Pomocno.unosBrojRaspon("Unesite šifru radnog mjesta: ", 1, Integer.MAX_VALUE));
 		r.setNaziv(Pomocno.unosTeksta("Unesite naziv radnog mjesta: "));
 		r.setPlaca(Pomocno.unosPlace("Unesite iznos plaće: "));
@@ -132,7 +132,7 @@ public void izbornik() {
 	public void pregled(boolean prikaziIzbornik) {
 		System.out.println("Radna mjesta u aplikaciji:");
 		int rb = 1;
-		for (radnoMjesto r : radnaMjesta ) {
+		for (RadnoMjesto r : radnaMjesta ) {
 			System.out.println(rb++ + ". " + r);
 		}
 		if (prikaziIzbornik) {
@@ -141,10 +141,10 @@ public void izbornik() {
 	}
 
 
-	public List<radnoMjesto> getRadnaMjesta() {
+	public List<RadnoMjesto> getRadnaMjesta() {
 		return radnaMjesta;
 	}
-	public void setRadnaMjesta(List<radnoMjesto> radnaMjesta) {
+	public void setRadnaMjesta(List<RadnoMjesto> radnaMjesta) {
 		this.radnaMjesta = radnaMjesta;
 	}
 	

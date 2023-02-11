@@ -6,14 +6,14 @@ public class Djelatnik extends Entitet {
 	private String prezime;
 	private String brojUgovora;
 	private String OIB;
-	private radnoMjesto radnoMjesto;
+	private RadnoMjesto radnoMjesto;
 
 	public Djelatnik() {
 		super();
 	}
 
 	public Djelatnik(int sifra, String ime, String prezime, String brojUgovora, String oIB,
-			radnoMjesto radnoMjesto) {
+			RadnoMjesto radnoMjesto) {
 		super(sifra);
 		this.ime = ime;
 		this.prezime = prezime;
@@ -54,11 +54,11 @@ public class Djelatnik extends Entitet {
 		OIB = oIB;
 	}
 
-	public radnoMjesto getRadnoMjesto() {
+	public RadnoMjesto getRadnoMjesto() {
 		return radnoMjesto;
 	}
 
-	public void setRadnoMjesto(radnoMjesto radnoMjesto) {
+	public void setRadnoMjesto(RadnoMjesto radnoMjesto) {
 		this.radnoMjesto = radnoMjesto;
 	}
 

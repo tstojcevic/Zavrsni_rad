@@ -4,20 +4,20 @@ import java.util.Scanner;
 
 import stojcevic.obrada.Djelatnici;
 import stojcevic.obrada.Gosti;
-import stojcevic.obrada.radnaMjesta;
+import stojcevic.obrada.RadnaMjesta;
 
 public class Start {
 	
 	private Djelatnici djelatnici;
 	private Gosti gosti;
-	private radnaMjesta radnaMjesta;
+	private RadnaMjesta radnaMjesta;
 	
 public Start() {
 	
 		Pomocno.ulaz = new Scanner(System.in);
 		djelatnici = new Djelatnici(this);
 		gosti = new Gosti(this);
-		radnaMjesta = new radnaMjesta(this);
+		radnaMjesta = new RadnaMjesta(this);
 		pozdravnaPoruka();
 		glavniIzbornik();
 		
@@ -72,7 +72,7 @@ public Start() {
 
 
 
-	public radnaMjesta getRadnaMjesta() {
+	public RadnaMjesta getRadnaMjesta() {
 		return radnaMjesta;
 	}
 

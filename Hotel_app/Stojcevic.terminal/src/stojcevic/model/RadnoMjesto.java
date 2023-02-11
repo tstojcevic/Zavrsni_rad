@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class radnoMjesto extends Entitet {
+public class RadnoMjesto extends Entitet {
 	
 	private String naziv;
 	private BigDecimal placa;
@@ -14,12 +14,12 @@ public class radnoMjesto extends Entitet {
 	
 	
 	
-	public radnoMjesto() {
+	public RadnoMjesto() {
 		super();
 		
 		
 }
-	public radnoMjesto(int sifra, String naziv, BigDecimal placa, boolean smjenskiRad)  {
+	public RadnoMjesto(int sifra, String naziv, BigDecimal placa, boolean smjenskiRad)  {
 		super(sifra);
 		this.naziv = naziv;
 		this.placa = placa;
