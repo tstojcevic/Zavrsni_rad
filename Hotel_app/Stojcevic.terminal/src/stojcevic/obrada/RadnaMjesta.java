@@ -6,7 +6,6 @@ import java.util.List;
 
 import stojcevic.Pomocno;
 import stojcevic.Start;
-import stojcevic.model.Djelatnik;
 import stojcevic.model.RadnoMjesto;
 
 public class RadnaMjesta  {
@@ -99,27 +98,26 @@ public void izbornik() {
 		int rb = Pomocno.unosBrojRaspon("Unesite radno mjesto koje želite promijeniti: ", 1, radnaMjesta.size());
 		RadnoMjesto r = radnaMjesta.get(rb - 1);
 		r.setNaziv(Pomocno.unosTeksta("Unesite naziv radnog mjesta: "));
-		r.setPlaca(Pomocno.unosPlace("Unesite iznos plaće: "));
+		r.setPlaca(Pomocno.unosIznosa("Unesite iznos plaće: "));
 		r.setSmjenskiRad(Pomocno.unosStatusa("Unesite 'da' ili 'ne' ukoliko je obvezan smjenski rad!"));
-		
-		start.getDjelatnici().pregled(false);
-		int i = Pomocno.unosBrojRaspon("Unesite kojeg djelatnika želite na radnom mjestu: ", 1,
-				start.getDjelatnici().getDjelatnici().size());
+		izbornik();
 		
 	}
 
-
 	private void unosNovogRadnogMjesta() {
+		radnaMjesta.add(unesiNovoRadnoMjesto());
+		izbornik();
+	}
+	
+
+	private RadnoMjesto unesiNovoRadnoMjesto() {
 		RadnoMjesto r = new RadnoMjesto();
 		r.setSifra(Pomocno.unosBrojRaspon("Unesite šifru radnog mjesta: ", 1, Integer.MAX_VALUE));
 		r.setNaziv(Pomocno.unosTeksta("Unesite naziv radnog mjesta: "));
-		r.setPlaca(Pomocno.unosPlace("Unesite iznos plaće: "));
+		r.setPlaca(Pomocno.unosIznosa("Unesite iznos plaće: "));
 		r.setSmjenskiRad(Pomocno.unosStatusa("Unesite 'da' ili 'ne' ukoliko je obvezan smjenski rad!"));
-		start.getDjelatnici().pregled(false);
-		int rb = Pomocno.unosBrojRaspon("Odaberite djelatnika: ", 1, start.getDjelatnici().getDjelatnici().size());
-			
-		radnaMjesta.add(r);
-		izbornik();
+		return r;	
+
 	}
 
 
