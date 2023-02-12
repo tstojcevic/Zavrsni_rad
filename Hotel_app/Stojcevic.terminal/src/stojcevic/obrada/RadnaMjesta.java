@@ -96,10 +96,10 @@ public void izbornik() {
 	private void promjena() {
 		pregled(false);
 		int rb = Pomocno.unosBrojRaspon("Unesite radno mjesto koje želite promijeniti: ", 1, radnaMjesta.size());
-		RadnoMjesto r = radnaMjesta.get(rb - 1);
-		r.setNaziv(Pomocno.unosTeksta("Unesite naziv radnog mjesta: "));
-		r.setPlaca(Pomocno.unosIznosa("Unesite iznos plaće: "));
-		r.setSmjenskiRad(Pomocno.unosStatusa("Unesite 'da' ili 'ne' ukoliko je obvezan smjenski rad!"));
+		RadnoMjesto rm = radnaMjesta.get(rb - 1);
+		rm.setNaziv(Pomocno.unosTeksta("Unesite naziv radnog mjesta: "));
+		rm.setPlaca(Pomocno.unosIznosa("Unesite iznos plaće: "));
+		rm.setSmjenskiRad(Pomocno.unosStatusa("Unesite 'da' ili 'ne' ukoliko je obvezan smjenski rad!"));
 		izbornik();
 		
 	}
@@ -111,12 +111,12 @@ public void izbornik() {
 	
 
 	private RadnoMjesto unesiNovoRadnoMjesto() {
-		RadnoMjesto r = new RadnoMjesto();
-		r.setSifra(Pomocno.unosBrojRaspon("Unesite šifru radnog mjesta: ", 1, Integer.MAX_VALUE));
-		r.setNaziv(Pomocno.unosTeksta("Unesite naziv radnog mjesta: "));
-		r.setPlaca(Pomocno.unosIznosa("Unesite iznos plaće: "));
-		r.setSmjenskiRad(Pomocno.unosStatusa("Unesite 'da' ili 'ne' ukoliko je obvezan smjenski rad!"));
-		return r;	
+		RadnoMjesto rm = new RadnoMjesto();
+		rm.setSifra(Pomocno.unosBrojRaspon("Unesite šifru radnog mjesta: ", 1, Integer.MAX_VALUE));
+		rm.setNaziv(Pomocno.unosTeksta("Unesite naziv radnog mjesta: "));
+		rm.setPlaca(Pomocno.unosIznosa("Unesite iznos plaće: "));
+		rm.setSmjenskiRad(Pomocno.unosStatusa("Unesite 'da' ili 'ne' ukoliko je obvezan smjenski rad!"));
+		return rm;	
 
 	}
 
@@ -125,8 +125,8 @@ public void izbornik() {
 	public void pregled(boolean prikaziIzbornik) {
 		System.out.println("Radna mjesta u aplikaciji:");
 		int rb = 1;
-		for (RadnoMjesto r : radnaMjesta ) {
-			System.out.println(rb++ + ". " + r);
+		for (RadnoMjesto rm : radnaMjesta ) {
+			System.out.println(rb++ + ". " + rm);
 		}
 		if (prikaziIzbornik) {
 			izbornik();
