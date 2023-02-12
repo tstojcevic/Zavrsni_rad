@@ -41,7 +41,7 @@ public class Pomocno {
 		}	
 	}
 	
-	public static BigDecimal unosPlace(String poruka) {
+	public static BigDecimal unosIznosa(String poruka) {
 
 		System.out.println(poruka);
 		String s = ulaz.nextLine();
