@@ -5,12 +5,14 @@ import java.util.Scanner;
 import stojcevic.obrada.Djelatnici;
 import stojcevic.obrada.Gosti;
 import stojcevic.obrada.RadnaMjesta;
+import stojcevic.obrada.Smjestaji;
 
 public class Start {
 	
 	private Djelatnici djelatnici;
 	private Gosti gosti;
 	private RadnaMjesta radnaMjesta;
+	private Smjestaji smjestaji;
 	
 public Start() {
 	
@@ -18,6 +20,7 @@ public Start() {
 		djelatnici = new Djelatnici(this);
 		gosti = new Gosti(this);
 		radnaMjesta = new RadnaMjesta(this);
+		smjestaji = new Smjestaji(this);
 		pozdravnaPoruka();
 		glavniIzbornik();
 		
@@ -51,6 +54,9 @@ public Start() {
 		case 3:
 			radnaMjesta.izbornik();
 			break;
+		case 4:
+			smjestaji.izbornik();
+			break;
 		case 6:
 			System.out.println("Izlazite iz programa.");
 			System.out.println("Doviđenja!");
@@ -66,6 +72,14 @@ public Start() {
 	
 	
 	
+	public Smjestaji getSmjestaji() {
+		return smjestaji;
+	}
+
+	public Gosti getGosti() {
+		return gosti;
+	}
+
 	public Djelatnici getDjelatnici() {
 		return djelatnici;
 	}
