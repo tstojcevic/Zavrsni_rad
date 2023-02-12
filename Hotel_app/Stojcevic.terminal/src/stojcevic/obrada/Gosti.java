@@ -114,7 +114,7 @@ public class Gosti {
 		return g;
 	}
 
-	private void pregled(boolean prikaziIzbornik) {
+	public void pregled(boolean prikaziIzbornik) {
 		System.out.println("Gosti u aplikaciji:");
 		int rb = 1;
 		for (Gost g : gosti) {
