@@ -1,6 +1,8 @@
 package stojcevic;
 
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Pomocno {
@@ -64,6 +66,17 @@ public class Pomocno {
 
 	}
 	
-	
+	public static Date datumi( ) {
+		SimpleDateFormat df = 
+				new SimpleDateFormat("dd. MMMM. yyyy. HH:mm:ss");
+		
+		System.out.println("Unesite datum: ");
+		try {
+			return df.parse(ulaz.nextLine());
+		} catch (Exception e) {
+		return new Date();	
+		}
+		
+	}
 	
 }
