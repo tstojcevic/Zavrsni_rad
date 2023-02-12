@@ -51,7 +51,7 @@ public class Pomocno {
 
 		String s;
 		while (true) {
-			System.out.println(poruka);
+//			System.out.println(poruka);
 			s = unosTeksta(poruka);
 			if (s.equalsIgnoreCase("DA")) {
 				return true;

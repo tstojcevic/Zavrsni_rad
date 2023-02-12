@@ -129,9 +129,10 @@ public void izbornik() {
 		d.setSifra(Pomocno.unosBrojRaspon("Unesite šifru djelatnika: ", 1, Integer.MAX_VALUE));
 		d.setIme(Pomocno.unosTeksta("Unesite ime djelatnika: "));
 		d.setPrezime(Pomocno.unosTeksta("Unesite prezime djelatnika: "));
+		d.setBrojUgovora(Pomocno.unosTeksta("Unesite broj ugovora djelatnika: "));
 		d.setOIB(Pomocno.unosTeksta("Unesite OIB djelatnika: "));
 //		d.setRadnoMjesto(Pomocno.unosTeksta("Unesite radno mjesto djelatnika: "));
-		d.setBrojUgovora(Pomocno.unosTeksta("Unesite broj ugovora djelatnika: "));
+		
 		return d;
 	}
 
