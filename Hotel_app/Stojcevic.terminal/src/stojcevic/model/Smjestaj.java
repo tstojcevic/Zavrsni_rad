@@ -45,5 +45,11 @@ public class Smjestaj extends Entitet{
 	public void setRaspolozivost(boolean raspolozivost) {
 		this.raspolozivost = raspolozivost;
 	}
+	
+	@Override
+	public String toString() {
+		
+		return "vrsta: " + vrsta + "	broj kreveta: " + brojKreveta + "	cijena: " + cijena + "	raspoloživost: " + raspolozivost;
+	}
 
 }
