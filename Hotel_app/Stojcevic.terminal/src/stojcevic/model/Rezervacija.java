@@ -97,5 +97,10 @@ public class Rezervacija extends Entitet {
 	public void setSmjestaji(List<Smjestaj> smjestaji) {
 		this.smjestaji = smjestaji;
 	}
+	
+	@Override
+	public String toString() {
+		return "broj rezervacije: " + brojRezervacije + "( gost: " + gost.getIme()+ " " + gost.getPrezime() + " )";
+	}
 
 }
