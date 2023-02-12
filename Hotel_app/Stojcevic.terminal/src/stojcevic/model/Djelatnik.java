@@ -64,7 +64,7 @@ public class Djelatnik extends Entitet {
 
 	@Override
 	public String toString() {
-		return "ime: " + ime + "	prezime: " + prezime + "	OIB: " + OIB + "	Broj_Ugovora: " + brojUgovora + "	radno mjesto: " + radnoMjesto + "";
+		return "ime: " + ime + "	prezime: " + prezime + "	OIB: " + OIB + "	Broj_Ugovora: " + brojUgovora + "	radno mjesto: " + radnoMjesto.getNaziv() + "";
 		
 	}
 	
