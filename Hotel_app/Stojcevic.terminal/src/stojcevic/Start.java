@@ -5,6 +5,7 @@ import java.util.Scanner;
 import stojcevic.obrada.Djelatnici;
 import stojcevic.obrada.Gosti;
 import stojcevic.obrada.RadnaMjesta;
+import stojcevic.obrada.Rezervacije;
 import stojcevic.obrada.Smjestaji;
 
 public class Start {
@@ -13,6 +14,7 @@ public class Start {
 	private Gosti gosti;
 	private RadnaMjesta radnaMjesta;
 	private Smjestaji smjestaji;
+	private Rezervacije rezervacije;
 	
 public Start() {
 	
@@ -21,6 +23,7 @@ public Start() {
 		gosti = new Gosti(this);
 		radnaMjesta = new RadnaMjesta(this);
 		smjestaji = new Smjestaji(this);
+		rezervacije = new Rezervacije(this);
 		pozdravnaPoruka();
 		glavniIzbornik();
 		
@@ -54,6 +57,9 @@ public Start() {
 		case 3:
 			radnaMjesta.izbornik();
 			break;
+		case 4:
+			rezervacije.izbornik();
+			break;
 		case 5:
 			smjestaji.izbornik();
 			break;
@@ -84,10 +90,12 @@ public Start() {
 		return djelatnici;
 	}
 
-
-
 	public RadnaMjesta getRadnaMjesta() {
 		return radnaMjesta;
+	}
+	
+	public Rezervacije getRezervacije() {
+		return rezervacije;
 	}
 
 	public static void main(String[] args) {
