@@ -1,6 +1,5 @@
 package stojcevic.model;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -13,6 +12,7 @@ public class Rezervacija extends Entitet{
 	private int brojSmjestajnihJedinica;
 	private  Gost gost;
 	private List<Djelatnik> djelatnici;
+	private List<Smjestaj> smjestaji;
 	
 	
 	
@@ -20,7 +20,7 @@ public class Rezervacija extends Entitet{
 		super();
 	}
 	public Rezervacija(int sifra, Date datumPrijave, Date datumOdjave, int brojGostiju, String brojRezervacije,
-			int brojSmjestajnihJedinica, Gost gost, List<Djelatnik> djelatnici) {
+			int brojSmjestajnihJedinica, Gost gost, List<Djelatnik> djelatnici, List<Smjestaj> smjestaji) {
 		super(sifra);
 		this.datumPrijave = datumPrijave;
 		this.datumOdjave = datumOdjave;
@@ -29,6 +29,7 @@ public class Rezervacija extends Entitet{
 		this.brojSmjestajnihJedinica = brojSmjestajnihJedinica;
 		this.gost = gost;
 		this.djelatnici = djelatnici;
+		this.smjestaji = smjestaji;
 	}
 	public Date getDatumPrijave() {
 		return datumPrijave;
@@ -71,6 +72,12 @@ public class Rezervacija extends Entitet{
 	}
 	public void setDjelatnici(List<Djelatnik> djelatnici) {
 		this.djelatnici = djelatnici;
+	}
+	public List<Smjestaj> getSmjestaji() {
+		return smjestaji;
+	}
+	public void setSmjestaji(List<Smjestaj> smjestaji) {
+		this.smjestaji = smjestaji;
 	}
 	
 	
