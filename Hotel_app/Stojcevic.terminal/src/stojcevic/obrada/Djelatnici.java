@@ -145,6 +145,6 @@ public void izbornik() {
 	}
 	
 	
-	
+//	greška u klasi za RadnoMjesto
 
 }
