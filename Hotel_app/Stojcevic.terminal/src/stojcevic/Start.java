@@ -54,7 +54,7 @@ public Start() {
 		case 3:
 			radnaMjesta.izbornik();
 			break;
-		case 4:
+		case 5:
 			smjestaji.izbornik();
 			break;
 		case 6:
