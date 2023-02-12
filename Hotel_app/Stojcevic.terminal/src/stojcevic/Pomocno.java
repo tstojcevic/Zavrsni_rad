@@ -66,17 +66,19 @@ public class Pomocno {
 
 	}
 	
-	public static Date datumi( ) {
-		SimpleDateFormat df = 
-				new SimpleDateFormat("dd. MMMM. yyyy. HH:mm:ss");
-		
-		System.out.println("Unesite datum: ");
-		try {
-			return df.parse(ulaz.nextLine());
-		} catch (Exception e) {
-		return new Date();	
+	public static Date unosDatuma(String poruka) {
+		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
+		Date date = null;
+		while (date == null) {
+			System.out.print(poruka + " (" +"dd-MM-yyyy" + "): ");
+			String dateStr = ulaz.nextLine();
+			try {
+				date = format.parse(dateStr);
+			} catch (Exception e) {
+				System.out.println("Pogrešan format datuma. Pokušajte ponovno.");
+			}
 		}
-		
+
+		return date;
 	}
-	
 }
