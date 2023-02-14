@@ -7,6 +7,7 @@ import java.util.List;
 import stojcevic.Pomocno;
 import stojcevic.Start;
 import stojcevic.model.Djelatnik;
+import stojcevic.model.RadnoMjesto;
 
 public class Djelatnici {
 	
@@ -101,8 +102,11 @@ public void izbornik() {
 		d.setPrezime(Pomocno.unosTeksta("Unesite prezime djelatnika: "));
 		d.setBrojUgovora(Pomocno.unosTeksta("Unesite broj ugovora djelatnika: "));
 		d.setOIB(Pomocno.unosTeksta("Unesite OIB djelatnika: "));
-//		d.setRadnoMjesto(Pomocno.unosTeksta("Unesite radno mjesto djelatnika: "));
 		
+		start.getRadnaMjesta().pregled(false);
+		int i = Pomocno.unosBrojRaspon("Unesite radno mjesto koje želite promijeniti za djelatnika: ", 1,
+				start.getRadnaMjesta().getRadnaMjesta().size());
+		d.setRadnoMjesto(start.getRadnaMjesta().getRadnaMjesta().get(i - 1));
 		
 		izbornik();
 	}
@@ -131,7 +135,11 @@ public void izbornik() {
 		d.setPrezime(Pomocno.unosTeksta("Unesite prezime djelatnika: "));
 		d.setBrojUgovora(Pomocno.unosTeksta("Unesite broj ugovora djelatnika: "));
 		d.setOIB(Pomocno.unosTeksta("Unesite OIB djelatnika: "));
-//		d.setRadnoMjesto(Pomocno.unosTeksta("Unesite radno mjesto djelatnika: "));
+		
+		start.getRadnaMjesta().pregled(false);
+		int rb = Pomocno.unosBrojRaspon("Unesite radno mjesto za djelatnika: ", 1, 
+				start.getRadnaMjesta().getRadnaMjesta().size());
+		d.setRadnoMjesto(start.getRadnaMjesta().getRadnaMjesta().get(rb-1));
 		
 		return d;
 	}
@@ -145,6 +153,5 @@ public void izbornik() {
 	}
 	
 	
-//	greška u klasi za RadnoMjesto
 
 }
