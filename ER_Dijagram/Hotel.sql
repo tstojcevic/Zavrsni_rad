@@ -1,8 +1,8 @@
 # xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < D:\Zavrsni_rad\ER_Dijagram\Hotel.sql
 
-drop database if exists hotel;
-create database hotel;
-use hotel;
+drop database if exists Hotel;
+create database Hotel default charset utf8;
+use Hotel;
 
 create table gost (
     sifra int not null primary key auto_increment,
@@ -38,7 +38,8 @@ create table rezervacija (
     broj_rezervacije varchar(20),
     broj_smjestajnih_jedinica varchar(20),
     gost int, 
-    djelatnik int
+    djelatnik int,
+    smjestaj int
 );
 
 create table radno_mjesto (
@@ -49,18 +50,12 @@ create table radno_mjesto (
 );
 
 
-create table rezervacija_smjestaj (
-    sifra int not null primary key auto_increment,
-    rezervacija int,
-    smjestaj int
-);
-
 
 alter table djelatnik add foreign key (radno_mjesto) references radno_mjesto(sifra);
 alter table rezervacija add foreign key(gost) references gost(sifra);
 alter table rezervacija add foreign key(djelatnik) references djelatnik(sifra);
-alter table rezervacija_smjestaj add foreign key(smjestaj) references smjestaj(sifra);
-alter table rezervacija_smjestaj add foreign key(rezervacija) references rezervacija(sifra);
+alter table rezervacija add foreign key(smjestaj) references smjestaj(sifra);
+
 
 insert into gost (ime,prezime,oib,email)
 values ('Marko','Marković',01234567891,'mmarkovic@email.com'), ('Petar','Petrović',12345678910,'ppetrovic@email.com'), ('Ivan','Ivić',23456789123,'iivic@email.com');
@@ -77,5 +72,3 @@ values ('Polupansion', 2, 1000.00, 1),('Puni pansion', 2, 1250.00, 0), ('All inc
 insert into rezervacija (datum_prijave,datum_odjave,broj_gostiju,gost,djelatnik)
 values ('2022-05-25','2022-05-30',2,2,1), ('2022-06-12','2022-06-20',3,1,1), ('2022-07-28','2022-08-05',4,3,1);
 
-insert into rezervacija_smjestaj (rezervacija,smjestaj)
-values (1,1), (2,2), (3,3);
