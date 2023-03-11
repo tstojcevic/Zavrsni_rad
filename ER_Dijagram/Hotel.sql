@@ -1,8 +1,8 @@
 # xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < D:\Zavrsni_rad\ER_Dijagram\Hotel.sql
 
-drop database if exists Hotel;
-create database Hotel default charset utf8;
-use Hotel;
+# drop database if exists Hotel;
+# create database Hotel default charset utf8;
+# use Hotel;
 
 create table gost (
     sifra int not null primary key auto_increment,
