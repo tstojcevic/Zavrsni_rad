@@ -15,6 +15,8 @@ public class Start {
 	private RadnaMjesta radnaMjesta;
 	private Smjestaji smjestaji;
 	private Rezervacije rezervacije;
+
+	//početni dio aplikacije napravljen u Eclipse
 	
 public Start() {
 	
