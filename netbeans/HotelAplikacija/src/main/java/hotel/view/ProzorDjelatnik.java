@@ -21,7 +21,7 @@ import javax.swing.JOptionPane;
  * @author Korisnik
  */
 
-//potrebno popraviti prikaz radnog mjesta za pojedinog djelatnika
+
 
 public class ProzorDjelatnik extends javax.swing.JFrame implements HotelViewSucelje{
     
