@@ -72,7 +72,7 @@ public class Gost extends Entitet {
 	
 	@Override
 	public String toString() {
-		return ime + " " + prezime;
+		return ime + " " + prezime + " " + rezervacije;
 	}
 	
 }

@@ -249,7 +249,7 @@ public class ProzorSmjestaj extends javax.swing.JFrame implements HotelViewSucel
             return;
         }
         
-        //obrada.setEntitet(lstPodaci.getSelectedValue());
+        
         
         napuniModel();
         try {
