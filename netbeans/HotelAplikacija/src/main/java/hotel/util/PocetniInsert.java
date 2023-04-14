@@ -132,7 +132,7 @@ public class PocetniInsert {
             r.setDatumPrijave(faker.date().birthday());
             r.setDatumOdjave(faker.date().birthday());
             r.setBrojGostiju(faker.number().numberBetween(1, 6));
-            r.setBrojRezervacije(faker.number().digit());
+            r.setBrojRezervacije(faker.idNumber().valid());
             r.setBrojSmjestajnihJedinica(faker.number().numberBetween(1, 20));
             r.setGost(gosti.get(sb(0, BROJ_GOSTIJU - 1)));
             d = new ArrayList<>();
