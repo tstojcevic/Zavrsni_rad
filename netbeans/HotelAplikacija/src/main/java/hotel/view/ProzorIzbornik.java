@@ -78,6 +78,7 @@ public class ProzorIzbornik extends javax.swing.JFrame {
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -155,6 +156,14 @@ public class ProzorIzbornik extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem7);
 
+        jMenuItem8.setText("GitHub link");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem8);
+
         jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
@@ -211,6 +220,16 @@ public class ProzorIzbornik extends javax.swing.JFrame {
         new ProzorRezervacija().setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+       try {
+            ProcessBuilder builder = new ProcessBuilder(
+                    "cmd.exe", "/c", "explorer https://github.com/tstojcevic/Zavrsni_rad");
+            builder.redirectErrorStream(true);
+            Process p = builder.start();
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -225,6 +244,7 @@ public class ProzorIzbornik extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JToolBar jToolBar1;
     private javax.swing.JLabel lblVrijeme;
     // End of variables declaration//GEN-END:variables

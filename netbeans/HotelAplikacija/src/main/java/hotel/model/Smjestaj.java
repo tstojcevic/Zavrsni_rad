@@ -72,7 +72,7 @@ public class Smjestaj extends Entitet {
     @Override
     public String toString() {
 
-        return vrsta + " " + raspolozivost;
+        return vrsta;
     }
 
 }

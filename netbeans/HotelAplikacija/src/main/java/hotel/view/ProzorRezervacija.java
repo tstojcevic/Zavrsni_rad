@@ -15,6 +15,9 @@ import hotel.model.Smjestaj;
 import hotel.util.Aplikacija;
 import hotel.util.HotelException;
 import java.awt.event.KeyEvent;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
@@ -34,6 +37,8 @@ public class ProzorRezervacija extends javax.swing.JFrame implements HotelViewSu
 
     private ObradaRezervacija obrada;
     private ObradaSmjestaj obradaSmjestaj;
+    private DecimalFormat df;
+    private SimpleDateFormat sdf;
 
     /**
      * Creates new form ProzorRezervacija
@@ -42,6 +47,10 @@ public class ProzorRezervacija extends javax.swing.JFrame implements HotelViewSu
         initComponents();
         obrada = new ObradaRezervacija();
         obradaSmjestaj = new ObradaSmjestaj();
+        sdf = new SimpleDateFormat("dd.MM.YYYY", new Locale("hr","HR"));
+        DecimalFormatSymbols dfs = new DecimalFormatSymbols(new Locale("hr", "HR"));
+        df = new DecimalFormat("###,##0.00",dfs);
+        
         setTitle(Aplikacija.NAZIV_APP + ": "
                 + Aplikacija.OPERATER.getImePrezime()
                 + ": Rezervacije");
