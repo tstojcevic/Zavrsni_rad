@@ -355,7 +355,7 @@ public class ProzorDjelatnik extends javax.swing.JFrame implements HotelViewSuce
         if(lstPodaci.getSelectedValue()==null){
             JOptionPane.showMessageDialog(
                     getRootPane(), 
-                    "Prvo odaberite smještaj");
+                    "Prvo odaberite djelatnika");
             return;
         }
         
