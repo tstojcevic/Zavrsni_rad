@@ -67,7 +67,7 @@ public class ProzorRezervacija extends javax.swing.JFrame implements HotelViewSu
         dps.setFormatForDatesCommonEra("dd. MM. YYYY.");
         dps.setTranslationClear("Očisti");
         dps.setTranslationToday("Danas");
-        dpDatumOdjave.setSettings(dps);
+        dpDatumPrijave.setSettings(dps);
     }
 
     private void definirajDatumOdjave() {
