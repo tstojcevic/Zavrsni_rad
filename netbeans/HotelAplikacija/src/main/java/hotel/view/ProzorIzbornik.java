@@ -156,7 +156,7 @@ public class ProzorIzbornik extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem7);
 
-        jMenuItem8.setText("GitHub link");
+        jMenuItem8.setText("GitHub ");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem8ActionPerformed(evt);
