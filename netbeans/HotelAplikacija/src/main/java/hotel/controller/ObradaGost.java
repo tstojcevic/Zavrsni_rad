@@ -119,7 +119,7 @@ public class ObradaGost extends Obrada<Gost> {
 
     private void kontrolaImeMinimalnaDuzina() throws HotelException {
         if (entitet.getIme().trim().length() < 3) {
-            throw new HotelException("Ime gosta može imati minimalno 3 znaka");
+            throw new HotelException("Ime gosta mora imati minimalno 3 znaka");
         }
     }
 
@@ -169,7 +169,7 @@ public class ObradaGost extends Obrada<Gost> {
 
     private void kontrolaPrezimeMinimalnaDuzina() throws HotelException {
         if (entitet.getPrezime().trim().length() < 3) {
-            throw new HotelException("Prezime gosta može imati minimalno 3 znaka");
+            throw new HotelException("Prezime gosta mora imati minimalno 3 znaka");
         }
     }
 
@@ -206,14 +206,14 @@ public class ObradaGost extends Obrada<Gost> {
     }
 
     private void kontrolaEmailNull() throws HotelException {
-        if (entitet.getEmail() == null) {
+        if (entitet.getEmail() == null && entitet.getEmail().isEmpty()) {
             throw new HotelException("Email mora biti unesen");
         }
     }
 
     private void kontrolaEmailMinimalnaDuzina() throws HotelException {
-        if (entitet.getEmail().trim().length() < 3) {
-            throw new HotelException("Email gosta može imati minimalno 3 znaka");
+        if (entitet.getEmail().trim().length() < 12) {
+            throw new HotelException("Email gosta može imati minimalno 12 znakova");
         }
     }
 

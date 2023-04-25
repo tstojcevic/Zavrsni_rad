@@ -22,11 +22,11 @@ import org.hibernate.Session;
  */
 public class PocetniInsert {
 
-    private static final int BROJ_GOSTIJU = 50;
+    private static final int BROJ_GOSTIJU = 20;
     private static final int BROJ_RADNIH_MJESTA = 5;
     private static final int BROJ_SMJESTAJA = 20;
-    private static final int BROJ_DJELATNIKA = 20;
-    private static final int BROJ_REZERVACIJA = 25;
+    private static final int BROJ_DJELATNIKA = 10;
+    private static final int BROJ_REZERVACIJA = 10;
 
     private Faker faker;
     private List<Gost> gosti;

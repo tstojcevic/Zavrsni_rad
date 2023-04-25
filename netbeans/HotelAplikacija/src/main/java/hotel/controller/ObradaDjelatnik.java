@@ -137,7 +137,7 @@ public class ObradaDjelatnik extends Obrada<Djelatnik> {
     }
     private void kontrolaImeMinimalnaDuzina() throws HotelException {
         if (entitet.getIme().trim().length() < 3) {
-            throw new HotelException("Ime djelatnika može imati minimalno 3 znaka");
+            throw new HotelException("Ime djelatnika mora imati minimalno 3 znaka");
         }
     }
     
@@ -187,7 +187,7 @@ public class ObradaDjelatnik extends Obrada<Djelatnik> {
     
     private void kontrolaPrezimeMinimalnaDuzina() throws HotelException {
         if (entitet.getPrezime().trim().length() < 3) {
-            throw new HotelException("Prezime djelatnika može imati minimalno 3 znaka");
+            throw new HotelException("Prezime djelatnika mora imati minimalno 3 znaka");
         }
     }
     

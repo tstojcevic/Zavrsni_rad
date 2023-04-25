@@ -294,7 +294,7 @@ public class ProzorRadnoMjesto extends javax.swing.JFrame implements HotelViewSu
         int ukupno=0;
         if(rm.getDjelatnici()!=null && !rm.getDjelatnici().isEmpty()){
             for(Djelatnik d : rm.getDjelatnici()){
-                ukupno+=rm.getDjelatnici().size();
+                ukupno=rm.getDjelatnici().size();
                 m.addElement(d);
         }
         lstDjelatnici.setModel(m);
